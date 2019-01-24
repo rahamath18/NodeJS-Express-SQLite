@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+
+  <script type="text/javascript">
+	var userDataForEdit = "[{{ userDataForEdit }}]";
+	userDataForEdit = userDataForEdit.replace(/&quot;/g, '\"');
+	var userDataForEditJSON = JSON.parse(userDataForEdit);
+
+  </script>
+
+	<form name="editUser" action = "/editUser" method = "POST">
+		
+		<input type="hidden" name="id" id="id" value="">
+		<table>
+			<tr>
+				<td colspan="2"><p><h3>Edit User Form</h3></p></td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td><input type="text" name="name" id="name" value=""/></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="text" name="email" id="email" value=""/></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type = "submit" value = "Edit" /></td>
+			</tr>
+		</table>
+
+	</form>
+
+  <script type="text/javascript">
+	document.forms[0].id.value = userDataForEditJSON[0].id;
+	document.forms[0].name.value = userDataForEditJSON[0].name;
+	document.forms[0].email.value = userDataForEditJSON[0].email;
+  </script>
+
+ </body>
+</html>
