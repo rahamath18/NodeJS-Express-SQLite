@@ -14,3 +14,6 @@ Express 4.16.4
 
 
 Please read [package-lock.json] for rest of versions.
+
+run as
+> node server.js
